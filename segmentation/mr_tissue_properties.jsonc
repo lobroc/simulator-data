@@ -1,0 +1,65 @@
+// All readings are at 3T.
+// For proton density, all readings are from https://doi.org/10.1002/mp.70204. Comments are to refer to table entry.
+
+{
+    "blood": {
+        "PD": 0.965, // Blood (whole)
+        "T1": 1932.0, // https://doi.org/10.1002/mrm.20605
+        "T2": 275.0, // https://doi.org/10.1002/mrm.20605
+        "T2*": 46.85 // Using Table 1 https://doi.org/10.1002/mrm.21342, Hct = 0.44, T2* ≈ 72.5 ms (fully ox) to 21.2 ms (venous). Centre-point is 46.85ms.
+    },
+    "bone_interface": { // Representation of cortical bone
+        "PD": 0.583, // Cortical bone
+        "T1": 223.0, // https://doi.org/10.1016/j.jmr.2010.09.013
+        "T2": 100.0, // Approximate mean of values reported in https://doi.org/10.1016/j.mri.2016.08.021
+        "T2*": 0.39 // https://doi.org/10.1016/j.jmr.2010.09.013
+    },
+    "bone": { // "Core" bone
+        "PD": 0.831, // Femur (whole)_30 years
+        "T1": 223.0,
+        "T2": 100.0,
+        "T2*": 0.39
+    },
+    "heart_muscle": {
+        "PD": 0.956, // Muscle
+        "T1": 1471.0, // https://doi.org/10.1002/mrm.20605
+        "T2": 47.0, // https://doi.org/10.1002/mrm.20605
+        "T2*": 21.0 // Mean of overall values at 3T from https://doi.org/10.3390/jcdd9080271
+    },
+    "cartilage": {
+        "PD": 0.943, // Cartilage
+        "T1": 1240.0, // https://doi.org/10.2214/ajr.183.2.1830343
+        "T2": 36.9, // https://doi.org/10.2214/ajr.183.2.1830343
+        "T2*": 19.1 //  https://doi.org/10.1007/s00256-011-1171-x
+    },
+    "liver": {
+        "PD": 0.965, // Liver
+        "T1": 812.0, // https://doi.org/10.2214/ajr.183.2.1830343
+        "T2": 42.0, // https://doi.org/10.2214/ajr.183.2.1830343
+        "T2*": 17.0 // https://doi.org/10.1002/jmri.21090
+    },
+    "muscle": {
+        "PD": 0.956, // Muscle
+        "T1": 1412.0, // https://doi.org/10.1002/mrm.20605
+        "T2": 40.0, // https://doi.org/10.1371/journal.pone.0264066
+        "T2*": 25.0 // https://doi.org/10.1371/journal.pone.0264066
+    },
+    "fat": {
+        "PD": 0.967, // Adipose
+        "T1": 371.0, // https://doi.org/10.2214/ajr.183.2.1830343
+        "T2": 133.0, // https://doi.org/10.2214/ajr.183.2.1830343
+        "T2*": 36.4 // https://doi.org/10.13104/jksmrm.2014.18.1.1
+    },
+    "lung": {
+        "PD": 0.239, // Lung (inflated)
+        "T1": 1200.0, // https://doi.org/10.1002/mrm.24570
+        "T2": 82.6, // Mean of reported values between lungs + breathing phases, from https://doi.org/10.1016/S0720-048X(98)00167-3
+        "T2*": 0.74 // https://doi.org/10.1002/mrm.22829
+    },
+    "air": { // This is essentially a shorthand for a void. In reality, this is not exactly zero.
+        "PD": 0.0,
+        "T1": 0.0,
+        "T2": 0.0,
+        "T2*": 0.0
+    }
+}
